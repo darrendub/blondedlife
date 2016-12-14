@@ -15,51 +15,20 @@ $unit-large:	100px;
  	padding: $unit-large;
  	position: relative;
  }
+
  section {
  	padding: $unit-medium;
  }
 
-/*--------------------------------------------------------------------
- * Typography
- *------------------------------------------------------------------*/
-
-$font-display: 'Shrikhand', cursive;
-$font-sans: 'Rubik', sans-serif;
-
- 
- .text-display {
- 	font-family: 'Shrikhand', cursive;
+ .vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
  }
 
- .text-sans {
- 	font-family: 'Rubik', sans-serif;
- }
 
- .text-light {
- 	font-weight: 300;
- }
-
- .font-regular {
- 	font-weight: 400;
- }
-
-  .font-medium {
- 	font-weight: 500;
- }
-
- .font-bold {
- 	font-weight: 700;
- }
-
- .text-white {
- 	color: #fff;
- }
-
- .text-center {
- 	text-align: center;
- }
-
- /*--------------------------------------------------------------------
+  /*--------------------------------------------------------------------
  * Color
  *------------------------------------------------------------------*/
 
@@ -103,17 +72,51 @@ $mint: #44AF69;
 
  }
 
-  .text-yellow {
+
+/*--------------------------------------------------------------------
+ * Typography
+ *------------------------------------------------------------------*/
+
+$font-display: 'Shrikhand', cursive;
+$font-sans: 'Rubik', sans-serif;
+
+ 
+ .text-display {
+ 	font-family: 'Shrikhand', cursive;
+ }
+
+ .text-sans {
+ 	font-family: 'Rubik', sans-serif;
+ }
+
+ .text-light {
+ 	font-weight: 300;
+ }
+
+ .font-regular {
+ 	font-weight: 400;
+ }
+
+  .font-medium {
+ 	font-weight: 500;
+ }
+
+ .font-bold {
+ 	font-weight: 700;
+ }
+
+ .text-white {
+ 	color: $white;
+ }
+
+ .text-sun {
  	color: $sun;
  }
 
-
- .vertical-align {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+ .text-center {
+ 	text-align: center;
  }
+
 
 
 

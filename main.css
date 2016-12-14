@@ -419,32 +419,11 @@ h1, h2, h3, h4 {
 section {
   padding: 50px; }
 
-/*--------------------------------------------------------------------
- * Typography
- *------------------------------------------------------------------*/
-.text-display {
-  font-family: 'Shrikhand', cursive; }
-
-.text-sans {
-  font-family: 'Rubik', sans-serif; }
-
-.text-light {
-  font-weight: 300; }
-
-.font-regular {
-  font-weight: 400; }
-
-.font-medium {
-  font-weight: 500; }
-
-.font-bold {
-  font-weight: 700; }
-
-.text-white {
-  color: #fff; }
-
-.text-center {
-  text-align: center; }
+.vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 /*--------------------------------------------------------------------
  * Color
@@ -475,14 +454,35 @@ section {
 .bg-mint {
   background-color: #44AF69; }
 
-.text-yellow {
+/*--------------------------------------------------------------------
+ * Typography
+ *------------------------------------------------------------------*/
+.text-display {
+  font-family: 'Shrikhand', cursive; }
+
+.text-sans {
+  font-family: 'Rubik', sans-serif; }
+
+.text-light {
+  font-weight: 300; }
+
+.font-regular {
+  font-weight: 400; }
+
+.font-medium {
+  font-weight: 500; }
+
+.font-bold {
+  font-weight: 700; }
+
+.text-white {
+  color: #fff; }
+
+.text-sun {
   color: #FEC601; }
 
-.vertical-align {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); }
+.text-center {
+  text-align: center; }
 
 /*--------------------------------------------------------------------
  * These bitches want nikes, they looking for a check
@@ -683,3 +683,45 @@ section {
 
 .self-control .container {
   margin-left: 100px; }
+
+.self-control h3 {
+  font-family: "Shrikhand", cursive;
+  color: #fff;
+  letter-spacing: 1px; }
+
+.self-control h1 {
+  font-family: "Rubik", sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 500; }
+
+.self-waves {
+  padding: 100px 0; }
+
+.solo h1 {
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 10rem;
+  text-transform: uppercase;
+  letter-spacing: 80px;
+  margin-left: 50px; }
+
+.godspeed h1, .godspeed h3 {
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase; }
+
+.godspeed h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  font-size: 8rem;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  letter-spacing: 2px; }
+
+.godspeed h3 {
+  font-family: "Shrikhand", cursive;
+  letter-spacing: 20px;
+  -webkit-filter: blur(1.5px);
+          filter: blur(1.5px); }
