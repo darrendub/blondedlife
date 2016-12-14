@@ -1,0 +1,254 @@
+/*--------------------------------------------------------------------
+ * These bitches want nikes, they looking for a check
+ *------------------------------------------------------------------*/
+
+// Label
+
+.label-container {
+	padding-top: $unit-small;
+	padding-bottom:$unit-small;
+	border: 1px solid $coal; 
+	display:table;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 20%;
+	font-family: $font-sans;
+}
+
+.label, .label-dark {
+	display:inline-block;
+	border-right: 1px solid $coal;
+	padding-left: $unit-small;
+	padding-right: $unit-small;
+	text-align: center;
+}
+.label:last-child {
+	border-right: none;
+}
+
+.label-text {
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+
+}
+
+.label-container-light {
+	border: 1px solid $cloud; 
+	.label {
+		border-right: 1px solid $cloud;
+		color: $cloud;
+		&:last-child {
+			border-right: none;
+		}
+	}
+}
+
+.label-title {
+	font-size: 11px;
+}
+
+
+
+ // Seigfried 
+
+.seigfried {
+
+	h3 {
+	 	font-size: 2.5rem;
+	 	font-weight: 400;
+	 	font-family: $font-sans;
+	 	margin: 0;
+	 	z-index: 100;
+	 	line-height: 2;
+	 	position: relative;
+ 	}
+ 	h1 {
+ 		font-family: $font-display;
+ 		font-size: 5rem;
+ 		color: $coal;
+ 		text-shadow:0 0 20px #101010;
+ 		position: absolute;
+ 		letter-spacing: 6px;
+ 		top: 60%;
+	    left: 50%;
+	    transform: translate(-50%, -50%);
+ 	}
+}
+.orb {
+	width: $unit-large;
+	height: $unit-large;
+	border-radius: 50%;
+	background-image: linear-gradient(-180deg, $white 0%, #FFD151 75%);
+	background-color: #FFD151;
+}
+
+// Nike Styles
+.nike {
+	h1 {
+		font-family: $font-sans;
+		font-weight: 300;	
+		text-align: center;
+		font-size:3rem;
+		text-transform: uppercase;
+		letter-spacing: 2.75px;
+	}
+	.love {
+		position: relative;
+		bottom: -22px;
+	}
+	.love-condom {
+		position: relative;
+		bottom: -40px;
+	}
+
+	
+}
+
+// Ivy-1 Styles
+
+.ivy-1 {
+	h3 {
+		font-size: 1.3rem;
+		letter-spacing: 0.5rem;
+	}
+}
+
+.diamond {
+	width: 4rem;
+	display: block;
+	margin: $unit-small auto;
+
+}
+
+.ivy {
+    &-circle {
+      max-width: 360px;
+      margin: 0 auto;
+      display: block;
+      animation: rotate 10s linear infinite;
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-family: $font-sans;
+      font-weight: 400;
+      font-size: 2rem;
+    }
+    &-words {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    &-is {
+      margin-left: -20px;
+      margin-bottom: 10px;
+    }
+    &-good {
+      margin-left: -50px;
+      margin-top: 10px;
+    }
+}
+
+.deep-down {
+  color: $white;
+  position: absolute;
+  margin: 0 auto;
+  left: 50%;
+  top: 46%;
+  &-text {
+    z-index: 100;
+    text-shadow: 0 14px 28px rgba(24,67,114,0.25), 0 10px 10px rgba(29,86,148,0.22);
+    transform: translateX(-50%);
+    font-size: 4rem;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+// Nights Styles
+
+.nights {
+
+	h1 {
+		font-family: $font-sans;
+		font-weight: 400;
+		font-size: 2rem;
+		letter-spacing: 3px;
+		text-transform: uppercase;
+	}
+
+	.instructions {
+		display: flex;
+	    justify-content: space-between;
+	    align-items: center;
+	    padding-bottom: $unit-medium;
+	}
+
+	.nights-eye {
+		max-width: 80px;
+	}
+
+	h3 {
+		font-family: $font-display;
+	}
+	#nights2 {
+		margin-top: -$unit-medium;
+	}
+
+}
+
+// Ivy 2 Styles
+.ivy-2 {
+	overflow: hidden;
+	h1, h3 {
+		text-align: center;
+		color: $white;
+		padding-bottom: $unit-medium;
+	}
+	h1 {
+		font-family: $font-display;
+		font-size: 4rem;
+		letter-spacing: 2px;
+	}
+	h3 {
+		font-family: $font-sans;
+		font-weight: 300;
+	}
+	.label-container {
+		position: relative;
+	}
+}
+
+.ivy-waves {
+	left: -400px;
+	bottom: -400px;
+    position: absolute;
+
+}
+
+
+// Self Control 
+
+.self-control {
+	.container {
+		margin-left: $unit-large;
+	}
+
+}
+
+
+
+
+
+
+
+
+

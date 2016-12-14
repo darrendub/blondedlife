@@ -1,0 +1,120 @@
+/*--------------------------------------------------------------------
+ * Units
+ *------------------------------------------------------------------*/
+
+$unit-small:	20px;
+$unit-medium:	50px;
+$unit-large:	100px;
+
+
+/*--------------------------------------------------------------------
+ * Base
+ *------------------------------------------------------------------*/
+
+ .container {
+ 	padding: $unit-large;
+ 	position: relative;
+ }
+ section {
+ 	padding: $unit-medium;
+ }
+
+/*--------------------------------------------------------------------
+ * Typography
+ *------------------------------------------------------------------*/
+
+$font-display: 'Shrikhand', cursive;
+$font-sans: 'Rubik', sans-serif;
+
+ 
+ .text-display {
+ 	font-family: 'Shrikhand', cursive;
+ }
+
+ .text-sans {
+ 	font-family: 'Rubik', sans-serif;
+ }
+
+ .text-light {
+ 	font-weight: 300;
+ }
+
+ .font-regular {
+ 	font-weight: 400;
+ }
+
+  .font-medium {
+ 	font-weight: 500;
+ }
+
+ .font-bold {
+ 	font-weight: 700;
+ }
+
+ .text-white {
+ 	color: #fff;
+ }
+
+ .text-center {
+ 	text-align: center;
+ }
+
+ /*--------------------------------------------------------------------
+ * Color
+ *------------------------------------------------------------------*/
+
+$white: #fff;
+$coal: #222;
+$cloud: #f8f8f8;
+$ocean: #276FBF;
+$wood:	#A87C59;
+$candy: #8D65B6;
+$sun: #FEC601;
+$midnight: #121420;
+$mint: #44AF69;
+
+ .bg {
+ 	&-coal {
+ 		background-color: $coal;
+ 	}
+ 	&-cloud {
+ 		background-color: $cloud;
+ 	}
+ 	&-ocean {
+ 		background-color: $ocean;
+ 	}
+ 	&-wood {
+ 		background-color: $wood;
+ 	}
+ 	&-cotton-candy {
+ 	background-color: rgba(231,90,146,0.05);
+	background-image: linear-gradient(-225deg, rgba(231,90,146,0.30) 0%, #396FD6 100%);
+
+ 	}
+ 	&-sun {
+ 		background-color: $sun;
+ 	}
+ 	&-midnight {
+ 		background-color: $midnight;
+ 	}	
+ 	&-mint {
+ 		background-color: $mint;
+ 	}
+
+ }
+
+  .text-yellow {
+ 	color: $sun;
+ }
+
+
+ .vertical-align {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+ }
+
+
+
+
