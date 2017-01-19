@@ -761,7 +761,7 @@ section {
   position: absolute;
   margin: 0 auto;
   top: 50%;
-  left: 18%;
+  left: 15%;
   text-align: center; }
   @media (min-width: 470px) {
     .deep-down {
@@ -801,7 +801,7 @@ section {
   .nights h1 {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: .75rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     margin-bottom: 20px; }
@@ -809,6 +809,11 @@ section {
       .nights h1 {
         font-size: 2rem;
         margin-bottom: 0; } }
+  .nights h3 {
+    font-size: 1rem; }
+    @media (min-width: 26em) {
+      .nights h3 {
+        font-size: 1.25rem; } }
   .nights .instructions {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -961,9 +966,11 @@ section {
             transform: translateY(20px); } }
 
 .self-waves {
-  padding: 20px 0;
   width: 100%;
   height: auto; }
+  @media (min-width: 35em) {
+    .self-waves {
+      padding: 20px 0; } }
   @media (min-width: 35em) {
     .self-waves {
       padding: 50px 0; } }
@@ -1016,14 +1023,18 @@ section {
 
 .godspeed h3 {
   font-family: "Shrikhand", cursive;
-  letter-spacing: 20px;
+  letter-spacing: 10px;
   -webkit-filter: blur(10px);
           filter: blur(10px);
   -webkit-animation: focus 8s linear infinite;
-          animation: focus 8s linear infinite; }
-  @media (min-width: 48em) {
+          animation: focus 8s linear infinite;
+  font-size: 1rem; }
+  @media (min-width: 35em) {
     .godspeed h3 {
       font-size: 2rem;
+      letter-spacing: 20px; } }
+  @media (min-width: 48em) {
+    .godspeed h3 {
       text-align: center; } }
 
 @-webkit-keyframes focus {

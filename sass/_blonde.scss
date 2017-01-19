@@ -275,7 +275,7 @@
   position: absolute;
   margin: 0 auto;
   top: 50%;
-  left: 18%;
+  left: 15%;
   text-align: center;
   @media (min-width: 470px) {
   	left: 25%;
@@ -324,7 +324,7 @@
 	h1 {
 		font-family: $font-sans;
 		font-weight: 400;
-		font-size: 1rem;
+		font-size: .75rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		margin-bottom:$unit-small;
@@ -333,6 +333,12 @@
 			margin-bottom: 0;	
 		}
 
+	}
+	h3 {
+		font-size: 1rem;
+		@media (min-width: $bp-small) {
+			font-size: 1.25rem;
+		}
 	}
 
 	.instructions {
@@ -468,9 +474,11 @@
 }
 
 .self-waves {
-	padding: $unit-small 0;
 	width: 100%;
 	height: auto;
+	@media (min-width: $bp-medium) {
+		padding: $unit-small 0;
+	}
 	@media (min-width: $bp-medium) {
 		padding: $unit-medium 0;
 	}
@@ -532,11 +540,15 @@
 	}
 	h3 {
 		font-family: $font-display;
-		letter-spacing: 20px;
+		letter-spacing: 10px;
 		filter: blur(10px);
 		animation: focus 8s linear infinite;
-		@media (min-width:$bp-large) {
+		font-size: 1rem;
+		@media (min-width:$bp-medium) {
 			font-size: 2rem;
+			letter-spacing: 20px;
+		}
+		@media (min-width:$bp-large) {
 			text-align: center;
 		}
 	}
