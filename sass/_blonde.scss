@@ -1,26 +1,31 @@
-/*--------------------------------------------------------------------
- * These bitches want nikes, they looking for a check
- *------------------------------------------------------------------*/
-
 // Label
 
 .label-container {
-	padding-top: $unit-small;
-	padding-bottom:$unit-small;
+	padding: $unit-small;
 	border: 1px solid $coal; 
-	display:table;
+	display: flex;
+	flex-wrap: wrap;
+  	justify-content: space-around;
+  	flex-flow: row wrap;
+  	max-width: 600px;
 	margin-left: auto;
 	margin-right: auto;
 	bottom: 20%;
 	font-family: $font-sans;
+	@media (max-width: $bp-medium) {
+	margin-left: $unit-small;
+	margin-right: $unit-small;
+
+	}	
 }
 
 .label, .label-dark {
-	display:inline-block;
+	text-align: center;
+	@media (min-width: $bp-medium) {
 	border-right: 1px solid $coal;
 	padding-left: $unit-small;
 	padding-right: $unit-small;
-	text-align: center;
+	}
 }
 .label:last-child {
 	border-right: none;
@@ -36,8 +41,10 @@
 .label-container-light {
 	border: 1px solid $cloud; 
 	.label {
-		border-right: 1px solid $cloud;
 		color: $cloud;
+		@media (min-width: $bp-medium) {
+			border-right: 1px solid $cloud;
+		}
 		&:last-child {
 			border-right: none;
 		}
@@ -53,57 +60,150 @@
  // Seigfried 
 
 .seigfried {
-
+	.container {
+		@media (min-width: $bp-large) {
+		padding-top: $unit-large*2;
+		padding-bottom: $unit-large*2;
+		}
+	}
 	h3 {
-	 	font-size: 2.5rem;
+	 	font-size: 2rem;
 	 	font-weight: 400;
 	 	font-family: $font-sans;
 	 	margin: 0;
 	 	z-index: 100;
-	 	line-height: 2;
+	 	line-height: 1.5;
 	 	position: relative;
+	 	animation: conceal 5s linear infinite;
+	 	@media (min-width: $bp-medium) {
+	 		font-size: 2.5rem;
+	 		line-height: 2;
+	 	}
  	}
+ 	.conceal-2 {
+ 		animation: conceal 5s ease infinite;
+ 		animation-delay: 0.5s;
+ 	}
+ 	.conceal-3 {
+ 		animation: conceal 5s ease infinite;
+ 		animation-delay: 1s;
+ 	}
+
  	h1 {
  		font-family: $font-display;
- 		font-size: 5rem;
+ 		font-size: 3.5rem;
  		color: $coal;
+ 		text-align: center;
  		text-shadow:0 0 20px #101010;
- 		position: absolute;
- 		letter-spacing: 6px;
- 		top: 60%;
+	    @media (min-width: $bp-medium) {
+	    top: 50%;
 	    left: 50%;
 	    transform: translate(-50%, -50%);
+	    position: absolute;
+		}
+	    @media (min-width: $bp-xlarge+10) {
+		font-size: 5rem;
+		}
+ 	}
+ 	svg {
+ 		width: 100px;
+ 		height: 100px;
+ 		text-align: center;
+ 		display: block;
+ 		margin: 0 auto;
+ 		padding-bottom: $unit-small;
+ 		stroke-dasharray: 10;
+		animation: dash 5s linear infinite;
+ 		@media (min-width: $bp-medium) {
+ 		padding-bottom: 0;
+ 		width: 400px;
+ 		height: 400px;
+ 		position: absolute;
+ 		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		stroke-dasharray: 500;
+		}
  	}
 }
-.orb {
-	width: $unit-large;
-	height: $unit-large;
-	border-radius: 50%;
-	background-image: linear-gradient(-180deg, $white 0%, #FFD151 75%);
-	background-color: #FFD151;
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
 }
 
+@keyframes conceal {
+  75%, 80% {
+  	opacity: 0;
+  }
+}
+
+
 // Nike Styles
+
 .nike {
+	.container {
+		padding-left:$unit-small;
+		padding-right:$unit-small;
+	}
 	h1 {
 		font-family: $font-sans;
 		font-weight: 300;	
 		text-align: center;
-		font-size:3rem;
+		font-size:1.75rem;
 		text-transform: uppercase;
-		letter-spacing: 2.75px;
+		letter-spacing: 2px;
+		@media (min-width: $bp-medium) {
+			font-size:2rem;
+		}
+		@media (min-width: $bp-medium+10) {
+			font-size:3rem;
+		}
+	}	
+	.love-word {
+		position: relative;
+		font-family: $font-display;
 	}
 	.love {
-		position: relative;
-		bottom: -22px;
+		position: absolute;
+		left: 8px;
+		@media (min-width: $bp-medium+10) {
+			left: 20px;
+		}
 	}
-	.love-condom {
-		position: relative;
-		bottom: -40px;
+	.heart {
+		bottom: 0;
+		animation: pulse 1s infinite ease;
+		width: $unit-medium;
+		@media (min-width: $bp-medium+10) {
+			width: $unit-medium+20;
+		}
+	}
+	.condom {
+		width: $unit-medium;
+		animation: rotate 5s infinite;
+		bottom: 1px;
+		@media (min-width: $bp-medium+10) {
+			width: $unit-medium+20;
+			left: 20px;
+		}
 	}
 
 	
 }
+@keyframes pulse {
+  50% {
+    transform: scale(1.15);
+
+  }
+ }
+ @keyframes rotate {
+  50% {
+    transform: rotate(45deg);
+
+  }
+ }
 
 // Ivy-1 Styles
 
@@ -115,9 +215,13 @@
 }
 
 .diamond {
-	width: 4rem;
+	width: 3rem;
 	display: block;
 	margin: $unit-small auto;
+	@media (min-width: $bp-medium) {
+		width: 4rem;
+	}
+
 
 }
 
@@ -132,34 +236,72 @@
       letter-spacing: 2px;
       font-family: $font-sans;
       font-weight: 400;
-      font-size: 2rem;
+      font-size: 1.5rem;
+      @media (min-width: $bp-medium) {
+      	font-size: 2rem;
+      }
     }
     &-words {
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 2px;
+      text-align: center;
+      color: $white;
+      @media (min-width: $bp-medium) {
+      	text-align: left;
+      }
     }
     &-is {
-      margin-left: -20px;
-      margin-bottom: 10px;
+    	padding-bottom: $unit-small;
+    	margin-top: -20px;
+		@media (min-width: $bp-medium) {
+			margin-top: 0;
+			padding-bottom: 0;
+		  	margin-left: -20px;
+		    margin-bottom: 10px;
+		}
     }
     &-good {
-      margin-left: -50px;
-      margin-top: 10px;
+    	padding-top: $unit-small;
+    	@media (min-width: $bp-medium) {
+    		padding-top: 0;
+	      margin-left: -50px;
+	      margin-top: 10px;
+	    }
     }
 }
 
 .deep-down {
-  color: $white;
   position: absolute;
   margin: 0 auto;
-  left: 50%;
-  top: 46%;
+  top: 50%;
+  left: 18%;
+  text-align: center;
+  @media (min-width: 470px) {
+  	left: 25%;
+  }
+	  @media (min-width: $bp-medium) {
+	  	left: 50%;
+		top: 40%;
+	  }
+	  @media (min-width: 850px) {
+  		top: 45%;
+	  }
   &-text {
+  	color: $white;
     z-index: 100;
+    text-align: center;
     text-shadow: 0 14px 28px rgba(24,67,114,0.25), 0 10px 10px rgba(29,86,148,0.22);
-    transform: translateX(-50%);
-    font-size: 4rem;
+    font-size: 2.5rem;
+
+    @media (min-width: $bp-medium) {
+      	font-size: 4rem;
+      	transform: translateX(-50%);
+      }
+      @media (min-width: $bp-xlarge) {
+      	font-size: 4.5rem;
+
+      }
   }
 }
 
@@ -176,13 +318,21 @@
 // Nights Styles
 
 .nights {
+	background: url(img/nights-wood.png) repeat, $wood;
+
 
 	h1 {
 		font-family: $font-sans;
 		font-weight: 400;
-		font-size: 2rem;
+		font-size: 1rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
+		margin-bottom:$unit-small;
+		@media (min-width: $bp-medium) {
+			font-size: 2rem;
+			margin-bottom: 0;	
+		}
+
 	}
 
 	.instructions {
@@ -195,19 +345,33 @@
 	.nights-eye {
 		max-width: 80px;
 	}
+	.nights-eye-ball {
+		animation: nights-eye 8s ease infinite;
+		
+	}
+	
+	@keyframes nights-eye {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+  	transform: translateX(20px);
+  }
+  100%{
+  	transform: translateX(-20px);
+  }
+}
 
 	h3 {
 		font-family: $font-display;
 	}
-	#nights2 {
-		margin-top: -$unit-medium;
-	}
-
 }
 
 // Ivy 2 Styles
 .ivy-2 {
 	overflow: hidden;
+	background: url(img/ivy-waves.png);
+	background-size: cover;
 	h1, h3 {
 		text-align: center;
 		color: $white;
@@ -215,8 +379,22 @@
 	}
 	h1 {
 		font-family: $font-display;
-		font-size: 4rem;
+		font-size: 2rem;
 		letter-spacing: 2px;
+		animation: breathe 5s ease infinite;
+		@keyframes breathe {
+			  50% {
+			    letter-spacing: 10px;
+			  }
+			}
+		@media (min-width: $bp-medium+10) {
+			font-size: 4rem;
+			@keyframes breathe {
+			  50% {
+			    letter-spacing: 25px;
+			  }
+			}
+		}
 	}
 	h3 {
 		font-family: $font-sans;
@@ -225,13 +403,7 @@
 	.label-container {
 		position: relative;
 	}
-}
-
-.ivy-waves {
-	left: -400px;
-	bottom: -400px;
-    position: absolute;
-
+	
 }
 
 
@@ -239,7 +411,9 @@
 
 .self-control {
 	.container {
-		margin-left: $unit-large;
+		@media (min-width: $bp-large) {
+			margin-left: $unit-medium;	
+		}
 	}
 	h3 {
 		font-family: $font-display;
@@ -248,15 +422,61 @@
 	}
 	h1 {
 		font-family: $font-sans;
-		font-size: 4rem;
+		font-size: 2rem;
 		color: $white;
 		font-weight: 500;
+		@media (min-width: $bp-medium) {
+			font-size: 3rem;
+		}
+		@media (min-width: $bp-medium+100) {
+			font-size: 4rem;
+		}
 	}
+	#Wave-Length, #Wave-Length-3, #Wave-Length-5, #Wave-Length-7, #Wave-Length-9, #Wave-Length-11, #Wave-Length-13, #Wave-Length-15, #Wave-Length-17, #Wave-Length-19, #Wave-Length-21 {
+		animation: sounds 2.5s linear infinite;
+	}
+	#Wave-Length-2, #Wave-Length-4, #Wave-Length-6, #Wave-Length-8, #Wave-Length-10, #Wave-Length-12, #Wave-Length-14, #Wave-Length-16, #Wave-Length-18, #Wave-Length-20 {
+		animation: sounds-reverse 2.5s ease infinite;
+	}
+	@keyframes sounds {
+	  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+  	transform: translateY(20px);
+  }
+  100%{
+  	transform: translateY(-20px);
+  }
+
+
+
+	}
+	@keyframes sounds-reverse {
+	    0% {
+    transform: translateY(20px);
+  }
+  50% {
+  	transform: translateY(-20px);
+  }
+  100%{
+  	transform: translateY(20px);
+  }
+}
+	
 
 }
 
 .self-waves {
-	padding: $unit-large 0;
+	padding: $unit-small 0;
+	width: 100%;
+	height: auto;
+	@media (min-width: $bp-medium) {
+		padding: $unit-medium 0;
+	}
+	@media (min-width: $bp-large) {
+		padding: $unit-large 0;
+	}
 }
 
 
@@ -267,11 +487,23 @@
 		color: $white;
 		font-family: $font-sans;
 		font-weight: 300;
-		font-size: 10rem;
+		font-size: 2rem;
 		text-transform: uppercase;
-		letter-spacing: 80px;
-		margin-left: $unit-medium;
+		letter-spacing: 20px;
+		width: 100%;
+		@media (min-width: $bp-medium) {
+			font-size: 3rem;
+			letter-spacing: 60px;
+		}
+		@media (min-width: $bp-medium+10) {
+			font-size: 4rem;
+			letter-spacing: 80px;
+		}
 	}
+	&-cup {
+		margin: 0 auto;
+		display: table;
+		}
 }
 
 // Godspeed
@@ -279,21 +511,43 @@
 .godspeed {
 	h1, h3 {
 		color: $white;
-		text-align: center;
 		text-transform: uppercase;
 	}
 
 	h1	{
 		font-family: $font-sans;
 		font-weight: 600;
-		font-size: 8rem;
-		filter: blur(1px);
+		font-size: 4rem;
+		filter: blur(5px);
 		letter-spacing: 2px;
+		animation: focus 8s linear infinite;
+		text-align: left;
+		@media (min-width:$bp-medium) {
+			font-size: 5rem;
+		}
+		@media (min-width:$bp-large) {
+			font-size: 8rem;
+			text-align: center;
+		}
 	}
 	h3 {
 		font-family: $font-display;
 		letter-spacing: 20px;
-		filter: blur(1.5px);
+		filter: blur(10px);
+		animation: focus 8s linear infinite;
+		@media (min-width:$bp-large) {
+			font-size: 2rem;
+			text-align: center;
+		}
+	}
+}
+
+@keyframes focus {
+	50% {
+		filter: blur(0px);
+	}
+	75% {
+		filter: blur(0px);
 	}
 }
 

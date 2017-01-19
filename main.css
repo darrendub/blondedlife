@@ -1,6 +1,11 @@
-/*--------------------------------------------------------------------
- * Blonded Life
- *------------------------------------------------------------------*/
+/*
+  _     _                 _          _   _ _  __     
+ | |   | |               | |        | | | (_)/ _|    
+ | |__ | | ___  _ __   __| | ___  __| | | |_| |_ ___ 
+ | '_ \| |/ _ \| '_ \ / _` |/ _ \/ _` | | | |  _/ _  | |_) | | (_) | | | | (_| |  __/ (_| | | | | ||  __/
+ |_.__/|_|\___/|_| |_|\__,_|\___|\__,_| |_|_|_| \___|
+
+*/
 /*--------------------------------------------------------------------
  * Reset
  *------------------------------------------------------------------*/
@@ -413,11 +418,17 @@ h1, h2, h3, h4 {
  * Base
  *------------------------------------------------------------------*/
 .container {
-  padding: 100px;
+  padding: 50px;
   position: relative; }
+  @media (min-width: 35em) {
+    .container {
+      padding: 100px; } }
 
 section {
-  padding: 50px; }
+  padding: 20px; }
+  @media (min-width: 35em) {
+    section {
+      padding: 50px; } }
 
 .vertical-align {
   position: relative;
@@ -484,25 +495,35 @@ section {
 .text-center {
   text-align: center; }
 
-/*--------------------------------------------------------------------
- * These bitches want nikes, they looking for a check
- *------------------------------------------------------------------*/
 .label-container {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
   border: 1px solid #222;
-  display: table;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   bottom: 20%;
   font-family: "Rubik", sans-serif; }
+  @media (max-width: 35em) {
+    .label-container {
+      margin-left: 20px;
+      margin-right: 20px; } }
 
 .label, .label-dark {
-  display: inline-block;
-  border-right: 1px solid #222;
-  padding-left: 20px;
-  padding-right: 20px;
   text-align: center; }
+  @media (min-width: 35em) {
+    .label, .label-dark {
+      border-right: 1px solid #222;
+      padding-left: 20px;
+      padding-right: 20px; } }
 
 .label:last-child {
   border-right: none; }
@@ -515,67 +536,182 @@ section {
 .label-container-light {
   border: 1px solid #f8f8f8; }
   .label-container-light .label {
-    border-right: 1px solid #f8f8f8;
     color: #f8f8f8; }
+    @media (min-width: 35em) {
+      .label-container-light .label {
+        border-right: 1px solid #f8f8f8; } }
     .label-container-light .label:last-child {
       border-right: none; }
 
 .label-title {
   font-size: 11px; }
 
+@media (min-width: 48em) {
+  .seigfried .container {
+    padding-top: 200px;
+    padding-bottom: 200px; } }
+
 .seigfried h3 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
   font-family: "Rubik", sans-serif;
   margin: 0;
   z-index: 100;
-  line-height: 2;
-  position: relative; }
+  line-height: 1.5;
+  position: relative;
+  -webkit-animation: conceal 5s linear infinite;
+          animation: conceal 5s linear infinite; }
+  @media (min-width: 35em) {
+    .seigfried h3 {
+      font-size: 2.5rem;
+      line-height: 2; } }
+
+.seigfried .conceal-2 {
+  -webkit-animation: conceal 5s ease infinite;
+          animation: conceal 5s ease infinite;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s; }
+
+.seigfried .conceal-3 {
+  -webkit-animation: conceal 5s ease infinite;
+          animation: conceal 5s ease infinite;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s; }
 
 .seigfried h1 {
   font-family: "Shrikhand", cursive;
-  font-size: 5rem;
+  font-size: 3.5rem;
   color: #222;
-  text-shadow: 0 0 20px #101010;
-  position: absolute;
-  letter-spacing: 6px;
-  top: 60%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+  text-align: center;
+  text-shadow: 0 0 20px #101010; }
+  @media (min-width: 35em) {
+    .seigfried h1 {
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      position: absolute; } }
+  @media (min-width: 70em) {
+    .seigfried h1 {
+      font-size: 5rem; } }
 
-.orb {
+.seigfried svg {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
-  background-image: -webkit-linear-gradient(top, #fff 0%, #FFD151 75%);
-  background-image: linear-gradient(-180deg, #fff 0%, #FFD151 75%);
-  background-color: #FFD151; }
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  stroke-dasharray: 10;
+  -webkit-animation: dash 5s linear infinite;
+          animation: dash 5s linear infinite; }
+  @media (min-width: 35em) {
+    .seigfried svg {
+      padding-bottom: 0;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      stroke-dasharray: 500; } }
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000; } }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000; } }
+
+@-webkit-keyframes conceal {
+  75%, 80% {
+    opacity: 0; } }
+
+@keyframes conceal {
+  75%, 80% {
+    opacity: 0; } }
+
+.nike .container {
+  padding-left: 20px;
+  padding-right: 20px; }
 
 .nike h1 {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.75rem;
   text-transform: uppercase;
-  letter-spacing: 2.75px; }
+  letter-spacing: 2px; }
+  @media (min-width: 35em) {
+    .nike h1 {
+      font-size: 2rem; } }
+  @media (min-width: 45em) {
+    .nike h1 {
+      font-size: 3rem; } }
+
+.nike .love-word {
+  position: relative;
+  font-family: "Shrikhand", cursive; }
 
 .nike .love {
-  position: relative;
-  bottom: -22px; }
+  position: absolute;
+  left: 8px; }
+  @media (min-width: 45em) {
+    .nike .love {
+      left: 20px; } }
 
-.nike .love-condom {
-  position: relative;
-  bottom: -40px; }
+.nike .heart {
+  bottom: 0;
+  -webkit-animation: pulse 1s infinite ease;
+          animation: pulse 1s infinite ease;
+  width: 50px; }
+  @media (min-width: 45em) {
+    .nike .heart {
+      width: 70px; } }
+
+.nike .condom {
+  width: 50px;
+  -webkit-animation: rotate 5s infinite;
+          animation: rotate 5s infinite;
+  bottom: 1px; }
+  @media (min-width: 45em) {
+    .nike .condom {
+      width: 70px;
+      left: 20px; } }
+
+@-webkit-keyframes pulse {
+  50% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); } }
+
+@keyframes pulse {
+  50% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); } }
+
+@-webkit-keyframes rotate {
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
+
+@keyframes rotate {
+  50% {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); } }
 
 .ivy-1 h3 {
   font-size: 1.3rem;
   letter-spacing: 0.5rem; }
 
 .diamond {
-  width: 4rem;
+  width: 3rem;
   display: block;
   margin: 20px auto; }
+  @media (min-width: 35em) {
+    .diamond {
+      width: 4rem; } }
 
 .ivy-circle {
   max-width: 360px;
@@ -588,41 +724,69 @@ section {
   letter-spacing: 2px;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 2rem; }
+  font-size: 1.5rem; }
+  @media (min-width: 35em) {
+    .ivy-circle {
+      font-size: 2rem; } }
 
 .ivy-words {
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  text-align: center;
+  color: #fff; }
+  @media (min-width: 35em) {
+    .ivy-words {
+      text-align: left; } }
 
 .ivy-is {
-  margin-left: -20px;
-  margin-bottom: 10px; }
+  padding-bottom: 20px;
+  margin-top: -20px; }
+  @media (min-width: 35em) {
+    .ivy-is {
+      margin-top: 0;
+      padding-bottom: 0;
+      margin-left: -20px;
+      margin-bottom: 10px; } }
 
 .ivy-good {
-  margin-left: -50px;
-  margin-top: 10px; }
+  padding-top: 20px; }
+  @media (min-width: 35em) {
+    .ivy-good {
+      padding-top: 0;
+      margin-left: -50px;
+      margin-top: 10px; } }
 
 .deep-down {
-  color: #fff;
   position: absolute;
   margin: 0 auto;
-  left: 50%;
-  top: 46%; }
+  top: 50%;
+  left: 18%;
+  text-align: center; }
+  @media (min-width: 470px) {
+    .deep-down {
+      left: 25%; } }
+  @media (min-width: 35em) {
+    .deep-down {
+      left: 50%;
+      top: 40%; } }
+  @media (min-width: 850px) {
+    .deep-down {
+      top: 45%; } }
   .deep-down-text {
+    color: #fff;
     z-index: 100;
+    text-align: center;
     text-shadow: 0 14px 28px rgba(24, 67, 114, 0.25), 0 10px 10px rgba(29, 86, 148, 0.22);
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-    font-size: 4rem; }
-
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg); }
-  to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
+    font-size: 2.5rem; }
+    @media (min-width: 35em) {
+      .deep-down-text {
+        font-size: 4rem;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%); } }
+    @media (min-width: 60em) {
+      .deep-down-text {
+        font-size: 4.5rem; } }
 
 @keyframes rotate {
   from {
@@ -632,57 +796,100 @@ section {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg); } }
 
-.nights h1 {
-  font-family: "Rubik", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
-  letter-spacing: 3px;
-  text-transform: uppercase; }
+.nights {
+  background: url(img/nights-wood.png) repeat, #A87C59; }
+  .nights h1 {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px; }
+    @media (min-width: 35em) {
+      .nights h1 {
+        font-size: 2rem;
+        margin-bottom: 0; } }
+  .nights .instructions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 50px; }
+  .nights .nights-eye {
+    max-width: 80px; }
+  .nights .nights-eye-ball {
+    -webkit-animation: nights-eye 8s ease infinite;
+            animation: nights-eye 8s ease infinite; }
 
-.nights .instructions {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-bottom: 50px; }
+@-webkit-keyframes nights-eye {
+  0% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); }
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); }
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); } }
 
-.nights .nights-eye {
-  max-width: 80px; }
-
-.nights h3 {
-  font-family: "Shrikhand", cursive; }
-
-.nights #nights2 {
-  margin-top: -50px; }
+@keyframes nights-eye {
+  0% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); }
+  50% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); }
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); } }
+  .nights h3 {
+    font-family: "Shrikhand", cursive; }
 
 .ivy-2 {
-  overflow: hidden; }
+  overflow: hidden;
+  background: url(img/ivy-waves.png);
+  background-size: cover; }
   .ivy-2 h1, .ivy-2 h3 {
     text-align: center;
     color: #fff;
     padding-bottom: 50px; }
   .ivy-2 h1 {
     font-family: "Shrikhand", cursive;
-    font-size: 4rem;
-    letter-spacing: 2px; }
+    font-size: 2rem;
+    letter-spacing: 2px;
+    -webkit-animation: breathe 5s ease infinite;
+            animation: breathe 5s ease infinite; }
+
+@-webkit-keyframes breathe {
+  50% {
+    letter-spacing: 10px; } }
+
+@keyframes breathe {
+  50% {
+    letter-spacing: 10px; } }
+    @media (min-width: 45em) {
+      .ivy-2 h1 {
+        font-size: 4rem; }
+      @-webkit-keyframes breathe {
+        50% {
+          letter-spacing: 25px; } }
+      @keyframes breathe {
+        50% {
+          letter-spacing: 25px; } } }
   .ivy-2 h3 {
     font-family: "Rubik", sans-serif;
     font-weight: 300; }
   .ivy-2 .label-container {
     position: relative; }
 
-.ivy-waves {
-  left: -400px;
-  bottom: -400px;
-  position: absolute; }
-
-.self-control .container {
-  margin-left: 100px; }
+@media (min-width: 48em) {
+  .self-control .container {
+    margin-left: 50px; } }
 
 .self-control h3 {
   font-family: "Shrikhand", cursive;
@@ -691,37 +898,146 @@ section {
 
 .self-control h1 {
   font-family: "Rubik", sans-serif;
-  font-size: 4rem;
+  font-size: 2rem;
   color: #fff;
   font-weight: 500; }
+  @media (min-width: 35em) {
+    .self-control h1 {
+      font-size: 3rem; } }
+  @media (min-width: 135em) {
+    .self-control h1 {
+      font-size: 4rem; } }
+
+.self-control #Wave-Length, .self-control #Wave-Length-3, .self-control #Wave-Length-5, .self-control #Wave-Length-7, .self-control #Wave-Length-9, .self-control #Wave-Length-11, .self-control #Wave-Length-13, .self-control #Wave-Length-15, .self-control #Wave-Length-17, .self-control #Wave-Length-19, .self-control #Wave-Length-21 {
+  -webkit-animation: sounds 2.5s linear infinite;
+          animation: sounds 2.5s linear infinite; }
+
+.self-control #Wave-Length-2, .self-control #Wave-Length-4, .self-control #Wave-Length-6, .self-control #Wave-Length-8, .self-control #Wave-Length-10, .self-control #Wave-Length-12, .self-control #Wave-Length-14, .self-control #Wave-Length-16, .self-control #Wave-Length-18, .self-control #Wave-Length-20 {
+  -webkit-animation: sounds-reverse 2.5s ease infinite;
+          animation: sounds-reverse 2.5s ease infinite; }
+
+@-webkit-keyframes sounds {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); } }
+
+@keyframes sounds {
+  0% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  50% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  100% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); } }
+
+@-webkit-keyframes sounds-reverse {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
+
+@keyframes sounds-reverse {
+  0% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); }
+  50% {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px); } }
 
 .self-waves {
-  padding: 100px 0; }
+  padding: 20px 0;
+  width: 100%;
+  height: auto; }
+  @media (min-width: 35em) {
+    .self-waves {
+      padding: 50px 0; } }
+  @media (min-width: 48em) {
+    .self-waves {
+      padding: 100px 0; } }
 
 .solo h1 {
   color: #fff;
   font-family: "Rubik", sans-serif;
   font-weight: 300;
-  font-size: 10rem;
+  font-size: 2rem;
   text-transform: uppercase;
-  letter-spacing: 80px;
-  margin-left: 50px; }
+  letter-spacing: 20px;
+  width: 100%; }
+  @media (min-width: 35em) {
+    .solo h1 {
+      font-size: 3rem;
+      letter-spacing: 60px; } }
+  @media (min-width: 45em) {
+    .solo h1 {
+      font-size: 4rem;
+      letter-spacing: 80px; } }
+
+.solo-cup {
+  margin: 0 auto;
+  display: table; }
 
 .godspeed h1, .godspeed h3 {
   color: #fff;
-  text-align: center;
   text-transform: uppercase; }
 
 .godspeed h1 {
   font-family: "Rubik", sans-serif;
   font-weight: 600;
-  font-size: 8rem;
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
-  letter-spacing: 2px; }
+  font-size: 4rem;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  letter-spacing: 2px;
+  -webkit-animation: focus 8s linear infinite;
+          animation: focus 8s linear infinite;
+  text-align: left; }
+  @media (min-width: 35em) {
+    .godspeed h1 {
+      font-size: 5rem; } }
+  @media (min-width: 48em) {
+    .godspeed h1 {
+      font-size: 8rem;
+      text-align: center; } }
 
 .godspeed h3 {
   font-family: "Shrikhand", cursive;
   letter-spacing: 20px;
-  -webkit-filter: blur(1.5px);
-          filter: blur(1.5px); }
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-animation: focus 8s linear infinite;
+          animation: focus 8s linear infinite; }
+  @media (min-width: 48em) {
+    .godspeed h3 {
+      font-size: 2rem;
+      text-align: center; } }
+
+@-webkit-keyframes focus {
+  50% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px); }
+  75% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px); } }
+
+@keyframes focus {
+  50% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px); }
+  75% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px); } }

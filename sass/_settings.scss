@@ -6,18 +6,33 @@ $unit-small:	20px;
 $unit-medium:	50px;
 $unit-large:	100px;
 
+//--------------------------------------------------------------------
+// Breakpoints
+//--------------------------------------------------------------------
+
+$bp-small:		26em;
+$bp-medium:		35em;
+$bp-large:		48em;
+$bp-xlarge:		60em;
+
 
 /*--------------------------------------------------------------------
  * Base
  *------------------------------------------------------------------*/
 
  .container {
- 	padding: $unit-large;
+ 	padding: $unit-medium;
  	position: relative;
+ 	@media (min-width: $bp-medium) {
+		padding: $unit-large;	
+	}
  }
 
  section {
- 	padding: $unit-medium;
+ 	padding: $unit-small;
+ 	@media (min-width: $bp-medium) {
+		padding: $unit-medium;	
+	}
  }
 
  .vertical-align {
