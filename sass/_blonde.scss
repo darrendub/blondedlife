@@ -15,20 +15,30 @@
 	@media (max-width: $bp-medium) {
 	margin-left: $unit-small;
 	margin-right: $unit-small;
-
 	}	
+	.label-link {
+		color: $coal;
+		&:visited {
+			color: $coal;
+		}
+	}
 }
 
 .label, .label-dark {
 	text-align: center;
-	@media (min-width: $bp-medium) {
-	border-right: 1px solid $coal;
 	padding-left: $unit-small;
 	padding-right: $unit-small;
+	padding-bottom: $unit-small;
+	@media (min-width: $bp-medium) {
+	padding-bottom: 0;
 	}
 }
-.label:last-child {
-	border-right: none;
+.label:nth-child(3), .label:nth-child(4) {
+	padding-bottom: 0;
+}
+
+.label-link {
+	text-decoration: none;
 }
 
 .label-text {
@@ -43,10 +53,16 @@
 	.label {
 		color: $cloud;
 		@media (min-width: $bp-medium) {
-			border-right: 1px solid $cloud;
+			// border-right: 1px solid $cloud;
 		}
 		&:last-child {
 			border-right: none;
+		}
+	}
+	.label-link {
+		color: $cloud;
+		&:visited {
+			color: $cloud;
 		}
 	}
 }
@@ -54,6 +70,47 @@
 .label-title {
 	font-size: 11px;
 }
+
+
+// Introduction
+
+.introduction {
+	h1 {
+		font-weight: 300;
+		padding-top: $unit-small;
+	}
+	line-height: 1.2;
+}
+
+.button {
+	padding: $unit-small/2 $unit-small;
+    border-radius: $unit-medium;
+    text-decoration: none;
+    font-family: $font-sans;
+    font-size: 17px;
+    display: inline-block;
+    background: #00aced;
+    vertical-align: center;
+    color: $white;
+    margin-top: $unit-small;
+    box-shadow: 0 10px 40px rgba(0,172,237,0.10), 0 10px 10px rgba(0,172,237,0.10);
+    &:visited {
+    	color: $white;
+    }
+    svg {
+    	vertical-align: middle;
+    	padding-left: 5px;
+    }
+}
+
+// Footer 
+	.footer {
+		p {
+			line-height: 1.4;
+		}
+	}
+
+
 
 
 
@@ -146,6 +203,10 @@
 	.container {
 		padding-left:$unit-small;
 		padding-right:$unit-small;
+		@media (min-width: $bp-medium) {
+			padding-top: $unit-large+2;
+			padding-bottom: $unit-large+2;
+		}
 	}
 	h1 {
 		font-family: $font-sans;

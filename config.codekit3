@@ -21,7 +21,7 @@
 		"oA": 0,
 		"oAP": "\/blond.png",
 		"oF": 0,
-		"opt": 0
+		"opt": 1
 		},
 	"\/CNAME": {
 		"ft": 8192,
@@ -34,6 +34,14 @@
 		"iS": 727,
 		"oA": 0,
 		"oAP": "\/favicon.png",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/img\/haircut.png": {
+		"ft": 32768,
+		"iS": 15347,
+		"oA": 0,
+		"oAP": "\/img\/haircut.png",
 		"oF": 0,
 		"opt": 0
 		},

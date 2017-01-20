@@ -132,6 +132,13 @@ $font-sans: 'Rubik', sans-serif;
  	text-align: center;
  }
 
+ .text-link {
+  color: $ocean;
+  &:visited {
+    color: $ocean;
+  }
+ }
+
 
 
 

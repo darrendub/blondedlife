@@ -495,6 +495,11 @@ section {
 .text-center {
   text-align: center; }
 
+.text-link {
+  color: #276FBF; }
+  .text-link:visited {
+    color: #276FBF; }
+
 .label-container {
   padding: 20px;
   border: 1px solid #222;
@@ -516,17 +521,25 @@ section {
     .label-container {
       margin-left: 20px;
       margin-right: 20px; } }
+  .label-container .label-link {
+    color: #222; }
+    .label-container .label-link:visited {
+      color: #222; }
 
 .label, .label-dark {
-  text-align: center; }
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px; }
   @media (min-width: 35em) {
     .label, .label-dark {
-      border-right: 1px solid #222;
-      padding-left: 20px;
-      padding-right: 20px; } }
+      padding-bottom: 0; } }
 
-.label:last-child {
-  border-right: none; }
+.label:nth-child(3), .label:nth-child(4) {
+  padding-bottom: 0; }
+
+.label-link {
+  text-decoration: none; }
 
 .label-text {
   display: block;
@@ -537,14 +550,42 @@ section {
   border: 1px solid #f8f8f8; }
   .label-container-light .label {
     color: #f8f8f8; }
-    @media (min-width: 35em) {
-      .label-container-light .label {
-        border-right: 1px solid #f8f8f8; } }
     .label-container-light .label:last-child {
       border-right: none; }
+  .label-container-light .label-link {
+    color: #f8f8f8; }
+    .label-container-light .label-link:visited {
+      color: #f8f8f8; }
 
 .label-title {
   font-size: 11px; }
+
+.introduction {
+  line-height: 1.2; }
+  .introduction h1 {
+    font-weight: 300;
+    padding-top: 20px; }
+
+.button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 17px;
+  display: inline-block;
+  background: #00aced;
+  vertical-align: center;
+  color: #fff;
+  margin-top: 20px;
+  box-shadow: 0 10px 40px rgba(0, 172, 237, 0.1), 0 10px 10px rgba(0, 172, 237, 0.1); }
+  .button:visited {
+    color: #fff; }
+  .button svg {
+    vertical-align: middle;
+    padding-left: 5px; }
+
+.footer p {
+  line-height: 1.4; }
 
 @media (min-width: 48em) {
   .seigfried .container {
@@ -636,6 +677,10 @@ section {
 .nike .container {
   padding-left: 20px;
   padding-right: 20px; }
+  @media (min-width: 35em) {
+    .nike .container {
+      padding-top: 102px;
+      padding-bottom: 102px; } }
 
 .nike h1 {
   font-family: "Rubik", sans-serif;
